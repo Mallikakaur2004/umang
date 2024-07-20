@@ -1,0 +1,455 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body {
+    font-family: 'Poppins',sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.top-bar {
+    background-color:#ed5ab0;
+    color: #fff;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.top-bar .contact-info, .top-bar .opening-time {
+    margin: 7px 65px 7px 65px;
+}
+
+header {
+    background-color: #f8f9fa;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    
+}
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background-color: #333;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    margin:0 30px 0 30px;
+    
+}
+
+nav .logo img {
+    height: 50px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav ul li {
+    position: relative;
+    padding: 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight:400;
+}
+nav ul li> a::after {
+    content: '\25BC'; 
+    font-size: 0.8em;
+    margin-left: 5px;
+    display: inline-block;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+nav ul li:hover > a::after {
+    color: #ed5ab0; 
+}
+nav ul .dropdown li a::after {
+    content: none;
+}
+
+.join-us-btn {
+    background-color: #ed5ab0;
+    color: white;
+    padding: 13px 40px 13px 40px;
+    font-size: large;
+    border-radius: 40px;
+    border-style: none;
+}
+.join-us-btn:hover{
+    background-color:blue;
+    transition:0.3s;
+    cursor: pointer;
+}
+nav ul .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 2px solid transparent;
+    transition: 0.5s;
+}
+nav ul li a:hover {
+    color: #ed5ab0;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+    border-color: #007bff;
+    
+}
+
+nav ul .dropdown li {
+    width: 150px;
+}
+
+nav ul .dropdown li a {
+    padding: 0.5rem 1rem;
+    display: block;
+    color: #333;
+}
+
+nav ul .dropdown li a:hover {
+    
+    color: #ed5ab0;
+}
+
+#banner {
+    position: relative;
+    width:100%;
+    overflow:hidden;
+}
+
+.carousel {
+    position: relative;
+    max-width: 100%;
+    width:100%;
+    margin: 0;
+    padding:0;
+    
+}
+
+.carousel-item {
+    display: none;
+    transition: transform 1s ease-in-out;
+}
+
+.carousel-item.active {
+    display: block;
+    transition: opacity 1s ease-in-out;
+}
+
+.carousel img {
+    width: 100%;
+    object-fit: cover;
+    height: 100vh;
+}
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    text-align: left;
+    color: #fff;
+    background-color: transparent;
+    padding: 0;
+    max-width: 50%;
+    line-height: 1.5;
+    
+}
+.carousel-caption h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #3D56F0;
+    margin-right:20rem;
+    font-family:'Abhaya Libre', serif;
+}
+
+.carousel-caption p {
+    font-size: 1.3rem;
+    margin-bottom: 1.5rem;
+    color:#333;
+}
+
+.carousel-caption .join-us-btn {
+    font-size: 1.2rem;
+    margin-top:20px;
+}
+
+.carousel .prev, .carousel .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 40px;
+    user-select: none;
+    background-color: #ed5ab0;
+}
+
+.carousel .next {
+    right: 0;
+   
+}
+
+.carousel .prev:hover, .carousel .next:hover {
+    background-color: #ed5ab0;
+}
+
+section {
+    padding: 4rem 2rem;
+}
+#kids-center {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('/Users/mallikakaurkalha/Desktop/html-css -course/thumbnails/line.png') no-repeat center center ;
+}
+
+#kids-center h1 {
+    color:#3D56F0;
+    font-size: 2.5rem;
+    font-family:'Abhaya Libre', serif;
+}
+
+#kids-center p {
+    color: black;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.kids-features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.kids-features .feature {
+    width: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.kids-features .feature img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.kids-features .feature p {
+    font-size: 1rem;
+    font-weight:bold;
+}
+
+.kids-dream {
+    margin-top: 50px;
+}
+
+.kids-dream h2 {
+    color: #3D56F0;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family:'Abhaya Libre', serif;
+}
+
+.kids-dream p {
+    color: #777;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.kids-dream .programs {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.kids-dream .program {
+    width: 45%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+}
+
+.kids-dream .program i {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 10px;
+}
+
+.kids-dream .program h3 {
+    color: #333;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.kids-dream .program p {
+    color: #777;
+    font-size: 1rem;
+}
+#education-birth {
+    
+    background: url('/Users/mallikakaurkalha/Desktop/html-css -course/thumbnails/bg1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    padding: 180px 20px;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+#education-birth .content {
+
+    background-color:transparent;
+    padding: 40px;
+    border-radius: 10px;
+    display: inline-block;
+    text-align:left;
+    max-width: 50%;
+    line-height: 1.5;
+    left: 10%;
+}
+
+#education-birth h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+    color:yellow;
+    font-family:'Abhaya Libre', serif;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+}
+
+#education-birth p {
+    font-size: 18px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+
+
+@media (max-width: 1024px) {
+    .top-bar .contact-info, .top-bar .opening-time {
+        margin: 7px 30px 7px 30px;
+    }
+
+    nav {
+        margin: 0 15px 0 15px;
+    }
+
+    .kids-features .feature {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .top-bar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .top-bar .contact-info, .top-bar .opening-time {
+        margin: 5px 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    nav ul li {
+        padding: 0.5rem;
+        width: 100%;
+    }
+
+    nav ul .dropdown {
+        position: static;
+        display: none;
+        width: 100%;
+    }
+
+    nav ul .dropdown li {
+        width: 100%;
+    }
+
+    .kids-features .feature, .kids-dream .program {
+        width: 100%;
+    }
+
+    .carousel-caption {
+        font-size: 14px;
+        padding: 5px 10px;
+    }
+
+    .join-us-btn {
+        padding: 10px 30px;
+        font-size: medium;
+    }
+    .hamburger {
+        display: block;
+    }
+
+    .menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        gap: 0;
+        flex-direction: column;
+        background-color: #f8f9fa;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+    }
+
+    .menu.active {
+        left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    #kids-center h1 {
+        font-size: 2rem;
+    }
+
+    .kids-dream h2 {
+        font-size: 1.5rem;
+    }
+
+    #education-birth h2 {
+        font-size: 28px;
+    }
+
+    #education-birth p {
+        font-size: 16px;
+    }
+}
